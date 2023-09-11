@@ -16,6 +16,11 @@ public class SpringApiApplication {
 		return "Sample Spring Boot Api is Running on Red Hat OpenShift";
 	}
 	
+	@GetMapping("/version")
+	public String getVersion2() {
+		return "Sample Spring Boot Api is Running on Red Hat OpenShift this is version 2";
+	}
+	
 	@PostMapping("/{name}")
 	public String postMessage(@PathVariable String name) {
 		return "The Api is build by: " + name;
